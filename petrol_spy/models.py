@@ -8,9 +8,12 @@ class Station(models.Model):
     latitude = models.DecimalField(max_digits=9, decimal_places=6)
     is_open = models.BooleanField()
     is_available = models.BooleanField()
+    
+    def __str__(self):
+        return self.name
 
 
-class Fuel(models.Model):
+class Fuel(models.Model): 
     class Types(models.TextChoices):
         BENZIN_80 = 'BENZIN_80', 'Benzin 80'
         BENZIN_91 = 'BENZIN_91', 'Benzin 91'
@@ -28,6 +31,9 @@ class Fuel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.type
+
 
 class Report(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reports")
@@ -37,3 +43,6 @@ class Report(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self) -> str:
+        return f'{self.user}'

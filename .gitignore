@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django and DRF-specific stuff
+*.log
+local_settings.py
+# Ignore the environment file that stores secrets and local settings
+.env
+.venv
+venv/
+env/
+# Static and media files generated locally
+static/
+media/
+# SQLite database file (if used locally)
+*.sqlite3
+
+# IDE-specific files and directories (optional, consider a global gitignore for these)
+.idea/  # Pycharm
+.vscode/  # VS Code
+*.swp

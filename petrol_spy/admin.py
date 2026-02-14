@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from petrol_spy.models import Fuel, Report, Station
+
+admin.site.register(Fuel)
+admin.site.register(Report)
+admin.site.register(Station)
